@@ -1,5 +1,4 @@
-image:https://img.shields.io/github/license/vcorreasantos/quintas-ilustration?style=plastic&logoColor=red[GitHub License]
-
+![GitHub License](https://img.shields.io/github/license/vcorreasantos/quintas-ilustration?style=plastic&logoColor=red)
 
 # Quintas_Illustration
 Site One Page para exibir ilustrações e desenhos originais de Quintas Illustration.
