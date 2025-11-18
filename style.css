@@ -1,0 +1,374 @@
+/** 
+folha de estilo do site CQuintas Nutri
+@author Vitoria Cristina Coreea dos Santos
+*/
+
+/* Layout ********************************
+
+/* Variaveis */
+:root {
+    --roxo: #4b1a8b;
+    --roxoazulado: #161954;
+    --roxoescuro: #2b1645;
+    --rosa: #d12aa1;
+    --vermelho: #9d0713;
+    --branco: #ffffff;
+    --preto: #000;
+}
+
+/* fim da variaveis cores *************************/
+
+/* CSS reset-----------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", "Open Sans";
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    /*Centralizar o leyout e o conterner*/
+}
+
+/* Criar  Botão  */
+.btn {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: var(--rosa);
+    padding: 10px 20px;
+    color: var(--branco);
+    border-radius: 30px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.897);
+
+}
+
+/* Smartphone Portrait --------------------------------*/
+/* cebeçario*/
+
+
+header {
+    height: 85px;
+    background-color: var(--roxoescuro);
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+
+}
+
+#check {
+    display: none;
+    /*sempre que quiser remover alguma coisa */
+}
+
+label {
+    font-size: 3rem;
+    color: rgba(148, 0, 165, 0.852);
+    position: fixed;
+    top: 5px;
+    right: 15px;
+}
+
+nav ul {
+    list-style: none;
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    background-color: rgba(99, 16, 143, 0.641);
+    width: 65%;
+    /*tamanho da tela que vai pegar o menu*/
+    right: -65%;
+    /*Ajustar com width*/
+    transition: all 0.5s;
+}
+
+/* Ação para uma caixa check*/
+/*Quando selecionado mudar ul */
+#check:checked~ul {
+    right: 0px;
+    /*background-color:  var(--marron); /*Mudar o ul total*/
+}
+
+nav ul li {
+    padding: 15px;
+    border-bottom: 1px solid var(--roxoazulado);
+    text-align: right;
+}
+
+nav ul li a {
+    /*Remover o sublinhado do texto*/
+    text-decoration: none;
+    color: var(--branco);
+
+}
+
+/* Principal banner */
+
+main {
+    height: 75vh;
+    height: 700px;
+    background:
+        /* linear-gradient(rgba(5, 48, 12, 0.37), rgba(53, 26, 2, 0.37)), */
+        url(img/banner.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+main .container {
+    /* Relativo ao main */
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    color: var(--roxo);
+    /* font-family */
+    font-size: 2.5rem;
+    text-shadow: 10px 10px 5px var(--preto), 0px 5px 5px rgb(0, 0, 0), 0px 15px 15px rgb(0, 0, 0), 0px 20px 20px rgba(0, 0, 0, 0.993);
+    margin-bottom: 10px;
+}
+
+main h2 {
+    color: var(--roxo);
+    font-size: 25px;
+    font-family: OpenSans;
+    text-shadow: 10px 10px 5px var(--preto), 0px 5px 5px rgb(0, 0, 0), 0px 15px 15px rgb(0, 0, 0), 0px 20px 20px rgba(0, 0, 0, 0.993);
+    margin-bottom: 90px;
+}
+
+/* Destaque */
+
+#destaque {
+    padding: 50px 10px;
+    background: url(img/backgroud1.jpeg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+#destaque .container {
+    flex-direction: column;
+}
+
+#hero {
+    text-align: center;
+}
+
+#hero img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 25px;
+}
+
+.hero-text h2 {
+    font-size: 1.4rem;
+    color: var(--branco);
+    text-shadow: 10px 10px 5px var(--preto), 0px 5px 5px rgb(0, 0, 0), 0px 15px 15px rgb(0, 0, 0), 0px 20px 20px rgba(0, 0, 0, 0.993);
+    margin-bottom: 15px;
+
+}
+
+.topic {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+
+.hero p {
+    margin-top: 15px;
+}
+
+.hero-text {
+    color: var(--branco);
+    text-shadow: 10px 10px 5px var(--preto), 0px 5px 5px rgb(0, 0, 0), 0px 15px 15px rgb(0, 0, 0), 0px 20px 20px rgba(0, 0, 0, 0.993);
+}
+
+/*fim do Smartphone----------------------------- */
+
+/* smartphone landscape ----------------------*/
+@media (min-width: 576px) {
+
+    /* layout */
+    .container {
+        max-width: 540px;
+    }
+
+    /* Cabeçario */
+    nav ul {
+        width: 35%;
+        right: -35%;
+        transition: all 0.5s;
+    }
+
+    /* Principal main */
+    main {
+        height: 70vh;
+    }
+
+    main h1 {
+        font-size: 1.95rem;
+    }
+
+    main h2 {
+        font-size: 1rem;
+    }
+
+    /* Destaque */
+
+    #destaque {
+        padding: 50px 0px;
+    }
+
+    #destaque .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #hero {
+        text-align: left;
+    }
+
+    #hero img {
+        width: 200px;
+        height: 200px;
+        margin: 0px 25px 0px 0px;
+    }
+
+    .topic {
+        display: none;
+    }
+}
+
+/*fim do landscape----------------------------*/
+
+/* Tablet portrait -----------------------------*/
+@media (min-width: 768px) {
+
+    /* layout */
+    .container {
+        max-width: 720px;
+
+    }
+
+    /* principal main */
+    main h1 {
+        font-size: 3.9rem;
+    }
+
+    main h2 {
+        font-size: 3rem;
+    }
+}
+
+/* fim do tablet ----------------------------*/
+
+/* Tablet landscape */
+@media (min-width: 992px) {
+
+    /* layout */
+    .container {
+        max-width: 960px;
+    }
+
+}
+
+/*---fim de landscape-------------------------*/
+
+/* Notebook / PC - HD*/
+@media (min-width: 1200px) {
+
+    /* layout */
+    .container {
+
+        justify-content: space-between;
+        max-width: 1140px;
+    }
+
+    /* Cabeçario */
+    header {
+        height: 100px;
+
+    }
+
+    .logo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        margin-top: 25px;
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a:hover {
+        color: var(--preto);
+
+    }
+
+    /* principol */
+    main {
+        height: 90vh;
+    }
+
+    main h1 {
+        font-size: 4rem;
+    }
+
+    main h2 {
+        font-size: 1rem;
+    }
+
+    /* destaque */
+
+    #destaque {
+        background-attachment: fixed;
+    }
+
+    #hero img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .topic {
+        display: flex;
+    }
+
+    .topic p {
+        margin-left: 15px;
+    }
+}
